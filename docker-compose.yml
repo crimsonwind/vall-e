@@ -1,0 +1,19 @@
+version: 
+  "3.9"
+
+services:
+  # App-Name
+  test-mzm-one:
+    # To Use Official Image with custom extensions in DockerFile
+    build:
+      context:
+        .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/usr/src/app
+    container_name:
+      Google_AI_Dubs
+    env_file:
+      - ./env/test.env
+    # restart:
+    #   on-failure
